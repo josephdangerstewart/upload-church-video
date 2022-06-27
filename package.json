@@ -1,0 +1,25 @@
+{
+  "name": "upload-video",
+  "version": "1.0.0",
+  "description": "Uploads the church video",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"init": "serverless",
+	"deploy": "yarn build && serverless deploy",
+	"build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephdangerstewart/upload-church-video.git"
+  },
+  "author": "Joseph Stewart <joseph.william.stewart@biola.edu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephdangerstewart/upload-church-video/issues"
+  },
+  "homepage": "https://github.com/josephdangerstewart/upload-church-video#readme",
+  "devDependencies": {
+    "serverless": "^3.19.0"
+  }
+}
