@@ -3,7 +3,7 @@
 		"target": "es2019",
 		"lib": ["es2020", "es2019"],
         "module": "CommonJS",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "removeComments": true,
         "experimentalDecorators": true,
         "rootDir": ".",

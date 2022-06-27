@@ -1,13 +1,7 @@
-export async function hello(event: any) {
-	return {
-		statusCode: 200,
-		body: JSON.stringify(
-			{
-				message: 'Go Serverless v3.0! Your function executed successfully!',
-				input: event,
-			},
-			null,
-			2
-		),
-	};
+require('dotenv').config();
+import { getSundayServiceVideoUrl } from './facebookApi';
+
+export async function uploadVideo(event: any) {
+	const url = await getSundayServiceVideoUrl();
+	console.log(url);
 }
