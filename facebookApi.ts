@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { isToday } from 'date-fns';
+import { isSunday } from 'date-fns';
 
 export async function getSundayServiceVideoUrl(): Promise<string> {
 	const rawResponse = await fetch(
@@ -14,7 +14,6 @@ export async function getSundayServiceVideoUrl(): Promise<string> {
 
 	return jsonResponse
 		.data
-		.filter((x) => isToday(new Date(x.created_time)))
 		.find((x) => x.story === 'Branches Fullerton was live.')
 		?.attachments
 		.data
